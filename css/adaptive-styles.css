@@ -447,6 +447,13 @@ letter-spacing: 0.02em;
 color:var(--primary-text-color);
 text-decoration: none;
 padding-top: 40px;
+display: block;
+   font-weight: 500;
+font-size: 36px;
+line-height: 40px;
+text-transform: capitalize;
+text-decoration: none;
+color: var(--seccondary-logo-color);
 
 }
 

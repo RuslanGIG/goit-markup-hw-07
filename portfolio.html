@@ -15,30 +15,45 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
     />
-    <link rel="stylesheet" href="./css/styles.css" />
+
+    <link rel="stylesheet" href="./css/adaptive-styles.css">
+    <!-- <link rel="stylesheet" href="./css/styles.css" /> -->
+
   </head>
   <body>
     <header class="header">
       <div class="conteiner">
         <div class="head-list">
-          <nav class="head-nav">
-            <a class="logo-title" href="./index.html"
-              >Web<span class="logo-title-secondary">Studio</span></a
+          <div class="mobile-flex-box">
+            <nav class="head-nav">
+              <a class="logo-title" href="./index.html"
+                >Web<span class="logo-title-secondary">Studio</span></a
+              >
+              <ul class="navigate">
+                <li class="item">
+                  <a class="navigate-item" href="./index.html">Studio</a>
+                </li>
+                <li class="item">
+                  <a class="navigate-item selected-nav" href="./portfolio.html"
+                    >Portfolio</a
+                  >
+                </li>
+                <li class="item">
+                  <a class="navigate-item" href="">Contacts</a>
+                </li>
+              </ul>
+            </nav>
+            <button
+              class="mobile-menu-open js-open-menu"
+              aria-expanded="false"
+              aria-controls="mobile-menu"
+              type="button"
             >
-            <ul class="navigate">
-              <li class="item">
-                <a class="navigate-item" href="./index.html">Studio</a>
-              </li>
-              <li class="item">
-                <a class="navigate-item selected-nav" href="./portfolio.html"
-                  >Portfolio</a
-                >
-              </li>
-              <li class="item">
-                <a class="navigate-item" href="">Contacts</a>
-              </li>
-            </ul>
-          </nav>
+              <svg class="burger-menu-open">
+                <use href="./images/sprite.svg#icon-menu-burger"></use>
+              </svg>
+            </button>
+          </div>
           <address>
             <ul class="link-list">
               <li>
@@ -55,198 +70,262 @@
           </address>
         </div>
       </div>
-    </header>
-    <section class="portfolio">
-      <div class="conteiner">
-        <h1 class="visually-hidden">Portfolio</h1>
+      <div class="mobile-menu js-menu-container" id="mobile-menu">
+        <div class="conteiner-mobile">
+          <button class="modal-btn js-close-menu" type="button">
+            <svg class="cross-svg-btn">
+              <use
+                class="modal-btn-cross"
+                href="./images/sprite-new.svg#icon-cross"
+              ></use>
+            </svg>
+          </button>
+          <ul class="mobile-nav">
+            <li><a class="mobile-nav-item" href="./index.html">Studio</a></li>
+            <li>
+              <a class="mobile-nav-item" href="./portfolio.html">Portfolio</a>
+            </li>
+            <li><a class="mobile-nav-item" href="">Contacts</a></li>
+          </ul>
+          <ul class="mobile-links">
+            <li>
+              <a class="mobile-tel-link" href="tel:+110001111111"
+                >+11 (000) 111-11-11</a
+              >
+            </li>
+            <li>
+              <a class="mobile-mail-link" href="mailto:info@devstudio.com"
+                >info@devstudio.com</a
+              >
+            </li>
+          </ul>
 
-        <ul class="portfolio-nav">
-          <li class="item">
-            <button class="portfilio-btn" type="button">All</button>
-          </li>
-          <li class="item">
-            <button class="portfilio-btn" type="button">Web Site</button>
-          </li>
-          <li class="item">
-            <button class="portfilio-btn" type="button">App</button>
-          </li>
-          <li class="item">
-            <button class="portfilio-btn" type="button">Design</button>
-          </li>
-          <li class="item">
-            <button class="portfilio-btn" type="button">Marketing</button>
-          </li>
-        </ul>
-
-        <ul class="card-list">
-          <li class="card">
-            <a class="item" href="">
-              <div class="overlay">
-                <img src="./images/img-5-min.jpg" alt="Bankup" />
-                <div class="overlay-hover">
-                  <p class="overlay-text">
-                    14 Stylish and User-Friendly App Design Concepts · Task
-                    Manager App · Calorie Tracker App · Exotic Fruit Ecommerce
-                    App · Cloud Storage App
-                  </p>
-                </div>
-              </div>
-              <div class="prtf-text-box">
-                <h2 class="prtf-list-title">Banking App Interface Concept</h2>
-                <p class="item-text">App</p>
-              </div>
-            </a>
-          </li>
-          <li class="card">
-            <a class="item" href="">
-              <div class="overlay">
-                <img src="./images/img-6-min.jpg" alt="Scaner" />
-                <div class="overlay-hover">
-                  <p class="overlay-text">
-                    14 Stylish and User-Friendly App Design Concepts · Task
-                    Manager App · Calorie Tracker App · Exotic Fruit Ecommerce
-                    App · Cloud Storage App
-                  </p>
-                </div>
-              </div>
-              <div class="prtf-text-box">
-                <h2 class="prtf-list-title">Cashless Payment</h2>
-                <p class="item-text">Marketing</p>
-              </div>
-            </a>
-          </li>
-          <li class="card">
-            <a class="item" href="">
-              <div class="overlay">
-                <img src="./images/img-7-min.jpg" alt="Laptop and phone" />
-                <div class="overlay-hover">
-                  <p class="overlay-text">
-                    14 Stylish and User-Friendly App Design Concepts · Task
-                    Manager App · Calorie Tracker App · Exotic Fruit Ecommerce
-                    App · Cloud Storage App
-                  </p>
-                </div>
-              </div>
-              <div class="prtf-text-box">
-                <h2 class="prtf-list-title">Meditaion App</h2>
-                <p class="item-text">App</p>
-              </div>
-            </a>
-          </li>
-          <li class="card">
-            <a class="item" href="">
-              <div class="overlay">
-                <img src="./images/img-8-min.jpg" alt="Car" />
-                <div class="overlay-hover">
-                  <p class="overlay-text">
-                    14 Stylish and User-Friendly App Design Concepts · Task
-                    Manager App · Calorie Tracker App · Exotic Fruit Ecommerce
-                    App · Cloud Storage App
-                  </p>
-                </div>
-              </div>
-              <div class="prtf-text-box">
-                <h2 class="prtf-list-title">Taxi Service</h2>
-                <p class="item-text">Marketing</p>
-              </div>
-            </a>
-          </li>
-          <li class="card">
-            <a class="item" href="">
-              <div class="overlay">
-                <img src="./images/img-9-min.jpg" alt="Screen Illustrations" />
-                <div class="overlay-hover">
-                  <p class="overlay-text">
-                    14 Stylish and User-Friendly App Design Concepts · Task
-                    Manager App · Calorie Tracker App · Exotic Fruit Ecommerce
-                    App · Cloud Storage App
-                  </p>
-                </div>
-              </div>
-              <div class="prtf-text-box">
-                <h2 class="prtf-list-title">Screen Illustrations</h2>
-                <p class="item-text">Design</p>
-              </div>
-            </a>
-          </li>
-          <li class="card">
-            <a class="item" href="">
-              <div class="overlay">
-                <img src="./images/img-10-min.jpg" alt="Girl" />
-                <div class="overlay-hover">
-                  <p class="overlay-text">
-                    14 Stylish and User-Friendly App Design Concepts · Task
-                    Manager App · Calorie Tracker App · Exotic Fruit Ecommerce
-                    App · Cloud Storage App
-                  </p>
-                </div>
-              </div>
-              <div class="prtf-text-box">
-                <h2 class="prtf-list-title">Online Courses</h2>
-                <p class="item-text">Marketing</p>
-              </div>
-            </a>
-          </li>
-          <li class="card">
-            <a class="item" href="">
-              <div class="overlay">
-                <img
-                  src="./images/img-11-min.jpg"
-                  alt="Instagram Stories Concept"
-                />
-                <div class="overlay-hover">
-                  <p class="overlay-text">
-                    14 Stylish and User-Friendly App Design Concepts · Task
-                    Manager App · Calorie Tracker App · Exotic Fruit Ecommerce
-                    App · Cloud Storage App
-                  </p>
-                </div>
-              </div>
-              <div class="prtf-text-box">
-                <h2 class="prtf-list-title">Instagram Stories Concept</h2>
-                <p class="item-text">Design</p>
-              </div>
-            </a>
-          </li>
-          <li class="card">
-            <a class="item" href="">
-              <div class="overlay">
-                <img src="./images/img-12-min.jpg" alt="Organic Food" />
-                <div class="overlay-hover">
-                  <p class="overlay-text">
-                    14 Stylish and User-Friendly App Design Concepts · Task
-                    Manager App · Calorie Tracker App · Exotic Fruit Ecommerce
-                    App · Cloud Storage App
-                  </p>
-                </div>
-              </div>
-              <div class="prtf-text-box">
-                <h2 class="prtf-list-title">Organic Food</h2>
-                <p class="item-text">Web Site</p>
-              </div>
-            </a>
-          </li>
-          <li class="card">
-            <a class="item" href="">
-              <div class="overlay">
-                <img src="./images/img-13-min.jpg" alt="Fresh Coffee" />
-                <div class="overlay-hover">
-                  <p class="overlay-text">
-                    14 Stylish and User-Friendly App Design Concepts · Task
-                    Manager App · Calorie Tracker App · Exotic Fruit Ecommerce
-                    App · Cloud Storage App
-                  </p>
-                </div>
-              </div>
-              <div class="prtf-text-box">
-                <h2 class="prtf-list-title">Fresh Coffee</h2>
-                <p class="item-text">Web Site</p>
-              </div>
-            </a>
-          </li>
-        </ul>
+          <ul class="mobile-sm-list">
+            <li class="item">
+              <a class="mobile-icon-box" href="">
+                <svg class="mobile-icon">
+                  <use href="./images/sprite.svg#icon-instagram"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="item">
+              <a class="mobile-icon-box" href="">
+                <svg class="mobile-icon">
+                  <use href="./images/sprite.svg#icon-twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="item">
+              <a class="mobile-icon-box" href="">
+                <svg class="mobile-icon">
+                  <use href="./images/sprite.svg#icon-facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="item">
+              <a class="mobile-icon-box" href="">
+                <svg class="mobile-icon">
+                  <use href="./images/sprite.svg#icon-linkedin"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
-    </section>
+    </header>
+    <main>
+      <section class="portfolio">
+        <div class="conteiner">
+          <h1 class="visually-hidden">Portfolio</h1>
+  
+          <ul class="portfolio-nav">
+            <li class="item">
+              <button class="portfilio-btn" type="button">All</button>
+            </li>
+            <li class="item">
+              <button class="portfilio-btn" type="button">Web Site</button>
+            </li>
+            <li class="item">
+              <button class="portfilio-btn" type="button">App</button>
+            </li>
+            <li class="item">
+              <button class="portfilio-btn" type="button">Design</button>
+            </li>
+            <li class="item">
+              <button class="portfilio-btn" type="button">Marketing</button>
+            </li>
+          </ul>
+  
+          <ul class="card-list">
+            <li class="card">
+              <a class="item" href="">
+                <div class="overlay">
+                  <img src="./images/img-5-min.jpg" alt="Bankup" />
+                  <div class="overlay-hover">
+                    <p class="overlay-text">
+                      14 Stylish and User-Friendly App Design Concepts · Task
+                      Manager App · Calorie Tracker App · Exotic Fruit Ecommerce
+                      App · Cloud Storage App
+                    </p>
+                  </div>
+                </div>
+                <div class="prtf-text-box">
+                  <h2 class="prtf-list-title">Banking App Interface Concept</h2>
+                  <p class="item-text">App</p>
+                </div>
+              </a>
+            </li>
+            <li class="card">
+              <a class="item" href="">
+                <div class="overlay">
+                  <img src="./images/img-6-min.jpg" alt="Scaner" />
+                  <div class="overlay-hover">
+                    <p class="overlay-text">
+                      14 Stylish and User-Friendly App Design Concepts · Task
+                      Manager App · Calorie Tracker App · Exotic Fruit Ecommerce
+                      App · Cloud Storage App
+                    </p>
+                  </div>
+                </div>
+                <div class="prtf-text-box">
+                  <h2 class="prtf-list-title">Cashless Payment</h2>
+                  <p class="item-text">Marketing</p>
+                </div>
+              </a>
+            </li>
+            <li class="card">
+              <a class="item" href="">
+                <div class="overlay">
+                  <img src="./images/img-7-min.jpg" alt="Laptop and phone" />
+                  <div class="overlay-hover">
+                    <p class="overlay-text">
+                      14 Stylish and User-Friendly App Design Concepts · Task
+                      Manager App · Calorie Tracker App · Exotic Fruit Ecommerce
+                      App · Cloud Storage App
+                    </p>
+                  </div>
+                </div>
+                <div class="prtf-text-box">
+                  <h2 class="prtf-list-title">Meditaion App</h2>
+                  <p class="item-text">App</p>
+                </div>
+              </a>
+            </li>
+            <li class="card">
+              <a class="item" href="">
+                <div class="overlay">
+                  <img src="./images/img-8-min.jpg" alt="Car" />
+                  <div class="overlay-hover">
+                    <p class="overlay-text">
+                      14 Stylish and User-Friendly App Design Concepts · Task
+                      Manager App · Calorie Tracker App · Exotic Fruit Ecommerce
+                      App · Cloud Storage App
+                    </p>
+                  </div>
+                </div>
+                <div class="prtf-text-box">
+                  <h2 class="prtf-list-title">Taxi Service</h2>
+                  <p class="item-text">Marketing</p>
+                </div>
+              </a>
+            </li>
+            <li class="card">
+              <a class="item" href="">
+                <div class="overlay">
+                  <img src="./images/img-9-min.jpg" alt="Screen Illustrations" />
+                  <div class="overlay-hover">
+                    <p class="overlay-text">
+                      14 Stylish and User-Friendly App Design Concepts · Task
+                      Manager App · Calorie Tracker App · Exotic Fruit Ecommerce
+                      App · Cloud Storage App
+                    </p>
+                  </div>
+                </div>
+                <div class="prtf-text-box">
+                  <h2 class="prtf-list-title">Screen Illustrations</h2>
+                  <p class="item-text">Design</p>
+                </div>
+              </a>
+            </li>
+            <li class="card">
+              <a class="item" href="">
+                <div class="overlay">
+                  <img src="./images/img-10-min.jpg" alt="Girl" />
+                  <div class="overlay-hover">
+                    <p class="overlay-text">
+                      14 Stylish and User-Friendly App Design Concepts · Task
+                      Manager App · Calorie Tracker App · Exotic Fruit Ecommerce
+                      App · Cloud Storage App
+                    </p>
+                  </div>
+                </div>
+                <div class="prtf-text-box">
+                  <h2 class="prtf-list-title">Online Courses</h2>
+                  <p class="item-text">Marketing</p>
+                </div>
+              </a>
+            </li>
+            <li class="card">
+              <a class="item" href="">
+                <div class="overlay">
+                  <img
+                    src="./images/img-11-min.jpg"
+                    alt="Instagram Stories Concept"
+                  />
+                  <div class="overlay-hover">
+                    <p class="overlay-text">
+                      14 Stylish and User-Friendly App Design Concepts · Task
+                      Manager App · Calorie Tracker App · Exotic Fruit Ecommerce
+                      App · Cloud Storage App
+                    </p>
+                  </div>
+                </div>
+                <div class="prtf-text-box">
+                  <h2 class="prtf-list-title">Instagram Stories Concept</h2>
+                  <p class="item-text">Design</p>
+                </div>
+              </a>
+            </li>
+            <li class="card">
+              <a class="item" href="">
+                <div class="overlay">
+                  <img src="./images/img-12-min.jpg" alt="Organic Food" />
+                  <div class="overlay-hover">
+                    <p class="overlay-text">
+                      14 Stylish and User-Friendly App Design Concepts · Task
+                      Manager App · Calorie Tracker App · Exotic Fruit Ecommerce
+                      App · Cloud Storage App
+                    </p>
+                  </div>
+                </div>
+                <div class="prtf-text-box">
+                  <h2 class="prtf-list-title">Organic Food</h2>
+                  <p class="item-text">Web Site</p>
+                </div>
+              </a>
+            </li>
+            <li class="card">
+              <a class="item" href="">
+                <div class="overlay">
+                  <img src="./images/img-13-min.jpg" alt="Fresh Coffee" />
+                  <div class="overlay-hover">
+                    <p class="overlay-text">
+                      14 Stylish and User-Friendly App Design Concepts · Task
+                      Manager App · Calorie Tracker App · Exotic Fruit Ecommerce
+                      App · Cloud Storage App
+                    </p>
+                  </div>
+                </div>
+                <div class="prtf-text-box">
+                  <h2 class="prtf-list-title">Fresh Coffee</h2>
+                  <p class="item-text">Web Site</p>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
     <footer class="footer">
       <div class="conteiner">
         <div class="footer-content">
@@ -285,7 +364,7 @@
                 </a>
               </li>
               <li class="item">
-                <a class="footer-icon-box" href="">
+                <a class="footer-icon-box last" href="">
                   <svg class="footer-icon">
                     <use href="./images/sprite.svg#icon-linkedin"></use>
                   </svg>
@@ -295,7 +374,7 @@
           </div>
           <div>
             <form class="fotter-content-third">
-              <label>
+              <label class="fotter-mail-box">
                 <p class="third-fotter-text">Subscribe</p>
                 <input
                   class="mail-place-fotter"
@@ -314,5 +393,13 @@
         </div>
       </div>
     </footer>
+    <script src="./js/modal.js"></script>
+    <script defer src="js/mobile-menu.js"></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
