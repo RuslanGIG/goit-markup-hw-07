@@ -447,8 +447,6 @@ li {
     border 250ms var(--animation-timing-function);
 }
 
-
-
 .company-logo:hover {
   fill: #4d5ae5;
   border: 1px solid #4d5ae5;
