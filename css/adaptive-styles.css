@@ -672,6 +672,13 @@ li {
   letter-spacing: 0.02em;
 }
 
+@media screen and (max-width: 1159px){
+   .contact-head{
+      margin-top: 12px;
+   }
+}
+
+
 @media screen and (min-width: 768px) {
   .friend-title {
     text-align: start;
