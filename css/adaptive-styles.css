@@ -960,6 +960,8 @@ li {
 .company-list .link-customers:hover .company-logo,
 .company-list .link-customers:focus .company-logo {
   fill: #4d5ae5;
+  transition: fill 250ms var(--animation-timing-function),
+    border 250ms var(--animation-timing-function);
 }
 
 .company-logo-box:hover,
