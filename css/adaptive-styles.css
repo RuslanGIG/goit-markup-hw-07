@@ -955,6 +955,8 @@ li {
   fill: black;
   fill: #8e8f99;
   padding: 16px 32px;
+  transition: fill 250ms var(--animation-timing-function),
+    border 250ms var(--animation-timing-function);
 }
 
 .company-list .link-customers:hover .company-logo,
